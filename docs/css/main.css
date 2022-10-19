@@ -86,6 +86,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "iowanoldstyle_bold";
+  font-display: swap;
+  src: url("../fonts/iowanoldstyle_bold.woff2") format("woff2"), url("../fonts/iowanoldstyle_bold.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 html,
 body,
 div,
@@ -3251,6 +3259,116 @@ body {
 
 #yakutia-map {
   background: #eeebe6;
+}
+
+#yakutia-map .yakutia-map__head {
+  padding: 48px 20px 70px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#yakutia-map .yakutia-map__title {
+  font-family: "Snell Roundhand";
+  font-style: italic;
+  font-weight: 700;
+  font-size: 29px;
+  letter-spacing: 1.88px;
+  color: #604427;
+  margin-top: -31px;
+  margin-bottom: 34px;
+}
+
+#yakutia-map .yakutia-map__descr {
+  font-weight: 700;
+}
+
+#yakutia-map .yakutia-map__quote {
+  font-weight: 400;
+}
+
+#yakutia-map .yakutia-map__descr,
+#yakutia-map .yakutia-map__quote {
+  max-width: 846px;
+  width: 100%;
+  font-family: "Avenir";
+  font-style: normal;
+  font-size: 12px;
+  line-height: 140%;
+  margin-bottom: 37px;
+  color: #333333;
+  letter-spacing: 0.114em;
+}
+
+#yakutia-map .image-container {
+  overflow: hidden;
+  width: 100%;
+  max-width: 622px;
+  height: 100%;
+  max-height: 260px;
+}
+
+#yakutia-map .image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+#yakutia-map .auth {
+  display: flex;
+  align-items: center;
+}
+
+#yakutia-map .auth__image {
+  margin-right: 56px;
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#yakutia-map .auth__image img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+}
+
+#yakutia-map .auth__desr {
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #333333;
+}
+
+#yakutia-map .map-container {
+  width: 100%;
+}
+
+#yakutia-map .map-container img {
+  width: 100%;
+  height: 100%;
+}
+
+#yakutia-map .yakutia-map__footer {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 36px;
+  padding-bottom: 67px;
+}
+
+#yakutia-map .footer-text {
+  max-width: 846px;
+  width: 100%;
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 1px;
+  color: #333333;
 }
 
 @media (max-width: 1190px) {
