@@ -3402,7 +3402,7 @@ body {
 
 #yakutia-map [data-modal-img="2"] {
   left: 25%;
-  top: 11.5%;
+  top: 11.1%;
   width: 11.5%;
   height: 5.7%;
 }
@@ -3430,7 +3430,7 @@ body {
 
 #yakutia-map [data-modal-img="6"] {
   left: 89.8%;
-  top: 86.5%;
+  top: 86.1%;
   width: 9.7%;
   height: 7%;
 }
@@ -3440,6 +3440,101 @@ body {
   top: 15%;
   width: 7.65%;
   height: 4.5%;
+}
+
+#yakutia-map .text-img {
+  position: absolute;
+  cursor: pointer;
+  transition: transform 0.25s ease-in-out;
+  will-change: transform;
+}
+
+#yakutia-map .text-img:hover {
+  transform: scale3d(1.05, 1.05, 1);
+}
+
+#yakutia-map .text-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left;
+}
+
+#yakutia-map [data-modal-text="1"] {
+  left: 3.15%;
+  top: 24.8%;
+  width: 12%;
+  height: 1.6%;
+}
+
+#yakutia-map [data-modal-text="2"] {
+  left: 3.15%;
+  top: 31.8%;
+  width: 14%;
+  height: 1.6%;
+}
+
+#yakutia-map [data-modal-text="3"] {
+  left: 50.7%;
+  top: 36.8%;
+  width: 13.4%;
+  height: 1.6%;
+}
+
+#yakutia-map [data-modal-text="4"] {
+  left: 15.3%;
+  top: 56.2%;
+  width: 14.85%;
+  height: 2.46%;
+}
+
+#yakutia-map [data-modal-text="5"] {
+  left: 2%;
+  top: 61.85%;
+  width: 13%;
+  height: 1.6%;
+}
+
+#yakutia-map [data-modal-text="6"] {
+  left: 0.5%;
+  top: 63.65%;
+  width: 14.4%;
+  height: 1.6%;
+}
+
+#yakutia-map [data-modal-text="7"] {
+  left: 0.1%;
+  top: 70.5%;
+  width: 11.65%;
+  height: 1.6%;
+}
+
+#yakutia-map [data-modal-text="8"] {
+  left: 23.8%;
+  top: 68%;
+  width: 8.5%;
+  height: 1.6%;
+}
+
+#yakutia-map [data-modal-text="9"] {
+  left: 24.5%;
+  top: 70%;
+  width: 10.2%;
+  height: 1.6%;
+}
+
+#yakutia-map [data-modal-text="10"] {
+  left: 9.5%;
+  top: 91.5%;
+  width: 19.6%;
+  height: 1.6%;
+}
+
+#yakutia-map [data-modal-text="11"] {
+  left: 10.5%;
+  top: 93.5%;
+  width: 5%;
+  height: 1.6%;
 }
 
 @media (max-width: 1190px) {
