@@ -101,7 +101,7 @@
   .yakutia-map__body {
     position: relative;
   }
-  .animal-img {
+  .clicable-img {
     position: absolute;
     cursor: pointer;
     transition: transform 0.25s ease-in-out;
@@ -164,7 +164,43 @@
     height: 4.5%;
   }
 
+  [data-modal-img="8"] {
+    left: 6%;
+    top: 21.2%;
+    width: 5.5%;
+    height: 3.5%;
+  }
+
+  [data-modal-img="9"] {
+    left: 6%;
+    top: 26.4%;
+    width: 8.7%;
+    height: 5.1%;
+  }
+
+  [data-modal-img="10"] {
+    left: 52.2%;
+    top: 31.8%;
+    width: 9%;
+    height: 5.1%;
+  }
+
+  [data-modal-img="11"] {
+    left: 0.5%;
+    top: 95.5%;
+    width: 8%;
+    height: 5%;
+  }
+
+  [data-modal-img="12"] {
+    left: 35.5%;
+    top: 67.1%;
+    width: 8%;
+    height: 4.1%;
+  }
+
   .text-img {
+    z-index: 2;
     position: absolute;
     cursor: pointer;
     transition: transform 0.25s ease-in-out;
