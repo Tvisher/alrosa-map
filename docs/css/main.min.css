@@ -3746,18 +3746,14 @@ body {
   border: 6px solid #ded8c8;
   width: 35%;
   padding: 14px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
 }
 
-#yakutia-map [data-animal-modal="1"] {
-  bottom: 10%;
-  right: 30%;
-}
-
-#yakutia-map [data-animal-modal="1"] .animal-modal__animal {
-  width: 10.87vw;
-  height: 11.44vw;
-  right: -13%;
-  bottom: -2%;
+#yakutia-map .animal-modal.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 #yakutia-map .animal-modal__face {
@@ -3808,6 +3804,7 @@ body {
 
 #yakutia-map .animal-modal__close {
   cursor: pointer;
+  z-index: 2;
   width: 1.27vw;
   height: 1.27vw;
   position: absolute;
@@ -3817,6 +3814,93 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+#yakutia-map [data-animal-modal="1"] {
+  top: 7%;
+  left: 20%;
+  min-height: 14vw;
+}
+
+#yakutia-map [data-animal-modal="1"] .animal-modal__animal {
+  width: 14.5vw;
+  height: 11.44vw;
+  right: -23%;
+  bottom: 2%;
+}
+
+#yakutia-map [data-animal-modal="2"] {
+  top: 7%;
+  left: 1%;
+  min-height: 14vw;
+}
+
+#yakutia-map [data-animal-modal="2"] .animal-modal__animal {
+  width: 14.5vw;
+  height: 11.44vw;
+  right: -23%;
+  bottom: 2%;
+}
+
+#yakutia-map [data-animal-modal="3"] {
+  top: 16%;
+  left: 5.2%;
+  min-height: 15.5vw;
+}
+
+#yakutia-map [data-animal-modal="3"] .animal-modal__animal {
+  width: 13.5vw;
+  height: 11.44vw;
+  right: -21%;
+  bottom: -12%;
+}
+
+#yakutia-map [data-animal-modal="3"] .animal-modal__animal img {
+  transform: scaleX(-1);
+}
+
+#yakutia-map [data-animal-modal="4"] {
+  opacity: 0;
+  top: 25%;
+  left: 1%;
+  min-height: 15.5vw;
+}
+
+#yakutia-map [data-animal-modal="4"] .animal-modal__animal {
+  width: 14.5vw;
+  height: 7.44vw;
+  right: -22%;
+  bottom: 5%;
+}
+
+#yakutia-map [data-animal-modal="4"] .animal-modal__animal img {
+  transform: scaleX(-1);
+}
+
+#yakutia-map [data-animal-modal="5"] {
+  bottom: 13.5%;
+  left: 6%;
+  min-height: 15.4vw;
+}
+
+#yakutia-map [data-animal-modal="5"] .animal-modal__animal {
+  width: 13.47vw;
+  height: 12.85vw;
+  right: -20%;
+  bottom: 6%;
+}
+
+#yakutia-map [data-animal-modal="6"] {
+  bottom: 6%;
+  right: 4.2%;
+  min-height: 17.7vw;
+}
+
+#yakutia-map [data-animal-modal="6"] .animal-modal__animal {
+  width: 10.87vw;
+  height: 11.44vw;
+  right: -13%;
+  bottom: 6%;
 }
 
 @media (max-width: 1190px) {

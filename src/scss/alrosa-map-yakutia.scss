@@ -451,24 +451,17 @@
   .animal-modal {
     display: flex;
     z-index: 5;
-    // left: 100px;
-    // top: 100px;
     position: absolute;
     background: #ece8de;
     border: 6px solid #ded8c8;
-    // width: 547px;
     width: 35%;
     padding: 14px;
-  }
-
-  [data-animal-modal="1"] {
-    bottom: 10%;
-    right: 30%;
-    .animal-modal__animal {
-      width: 10.87vw;
-      height: 11.44vw;
-      right: -13%;
-      bottom: -2%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+    &.show {
+      opacity: 1;
+      visibility: visible;
     }
   }
 
@@ -491,23 +484,19 @@
     font-family: "iowanoldstyle_bold";
     font-style: normal;
     font-weight: 400;
-    // font-size: 23px;
     font-size: 1.46vw;
     line-height: 100%;
     color: #604427;
-    // margin-bottom: 11px;
     margin-bottom: 0.7vw;
   }
 
   .animal-modal__content {
-    // max-width: 263px;
     max-width: 51.52%;
   }
   .animal-modal__descr {
     font-family: "Avenir";
     font-style: normal;
     font-weight: 400;
-    // font-size: 12px;
     font-size: 0.76vw;
     line-height: 140%;
     color: #333333;
@@ -519,8 +508,7 @@
   }
   .animal-modal__close {
     cursor: pointer;
-    // width: 20px;
-    // height: 20px;
+    z-index: 2;
     width: 1.27vw;
     height: 1.27vw;
     position: absolute;
@@ -530,5 +518,83 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+  }
+
+  [data-animal-modal="1"] {
+    top: 7%;
+    left: 20%;
+    min-height: 14vw;
+    .animal-modal__animal {
+      width: 14.5vw;
+      height: 11.44vw;
+      right: -23%;
+      bottom: 2%;
+    }
+  }
+
+  [data-animal-modal="2"] {
+    top: 7%;
+    left: 1%;
+    min-height: 14vw;
+    .animal-modal__animal {
+      width: 14.5vw;
+      height: 11.44vw;
+      right: -23%;
+      bottom: 2%;
+    }
+  }
+
+  [data-animal-modal="3"] {
+    top: 16%;
+    left: 5.2%;
+    min-height: 15.5vw;
+    .animal-modal__animal {
+      width: 13.5vw;
+      height: 11.44vw;
+      right: -21%;
+      bottom: -12%;
+      img {
+        transform: scaleX(-1);
+      }
+    }
+  }
+  [data-animal-modal="4"] {
+    opacity: 0;
+    top: 25%;
+    left: 1%;
+    min-height: 15.5vw;
+    .animal-modal__animal {
+      width: 14.5vw;
+      height: 7.44vw;
+      right: -22%;
+      bottom: 5%;
+      img {
+        transform: scaleX(-1);
+      }
+    }
+  }
+
+  [data-animal-modal="5"] {
+    bottom: 13.5%;
+    left: 6%;
+    min-height: 15.4vw;
+    .animal-modal__animal {
+      width: 13.47vw;
+      height: 12.85vw;
+      right: -20%;
+      bottom: 6%;
+    }
+  }
+
+  [data-animal-modal="6"] {
+    bottom: 6%;
+    right: 4.2%;
+    min-height: 17.7vw;
+    .animal-modal__animal {
+      width: 10.87vw;
+      height: 11.44vw;
+      right: -13%;
+      bottom: 6%;
+    }
   }
 }
