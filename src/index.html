@@ -248,6 +248,28 @@
         </div>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/4.0.31/fancybox.umd.js" integrity="sha512-KbN1/HGDfgCQ9jeSs8O4t3Jeq2Gxv24KTWveN9QKrk/84cm5fpU8ankouT5Nsa1Pmx4SNXHZhIavwYMmnb9yHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+    <script>
+        document.addEventListener('click', (e) => {
+            const target = e.target;
+            if (target.closest('[data-modal-img]')) {
+                const modalImgId = target.closest('[data-modal-img]').getAttribute('data-modal-img');
+                const animalModal = document.querySelector(`[data-animal-modal="${modalImgId}"]`);
+                if (animalModal) {
+                    const activeModalImg = document.querySelector('[data-animal-modal].show');
+                    if (activeModalImg) {
+                        activeModalImg.classList.remove('show');
+                    }
+                    animalModal.classList.add('show');
+                }
+            }
+            if (target.closest('.animal-modal__close')) {
+                target.closest('.animal-modal').classList.remove('show');
+            }
+        });
+    </script>
 </body>
 
 </html>
