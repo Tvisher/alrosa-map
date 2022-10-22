@@ -3257,6 +3257,34 @@ body {
   border-color: #22211e;
 }
 
+.carousel__button.fancybox__button--zoom,
+.carousel__button.fancybox__button--fullscreen {
+  display: none;
+}
+
+.carousel__button.fancybox__button--close {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 63px;
+  height: 63px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M19 32V19H32' stroke='%23604427' stroke-width='3'/%3e%3cpath d='M13 9.53674e-07L13 13L-7.15256e-07 13' stroke='%23604427' stroke-width='3'/%3e%3c/svg%3e ");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40%;
+}
+
+.carousel__button.fancybox__button--close svg {
+  display: none;
+}
+
+.fancybox__toolbar {
+  position: static !important;
+}
+
 #yakutia-map {
   background: #eeebe6;
 }
@@ -3486,9 +3514,9 @@ body {
 
 #yakutia-map [data-modal-img="6"] {
   left: 89.8%;
-  top: 86.1%;
-  width: 9.7%;
-  height: 7%;
+  top: 87.1%;
+  width: 8.7%;
+  height: 6%;
 }
 
 #yakutia-map [data-modal-img="7"] {
@@ -3710,32 +3738,85 @@ body {
   height: 2.15%;
 }
 
-.carousel__button.fancybox__button--zoom,
-.carousel__button.fancybox__button--fullscreen {
-  display: none;
+#yakutia-map .animal-modal {
+  display: flex;
+  z-index: 5;
+  position: absolute;
+  background: #ece8de;
+  border: 6px solid #ded8c8;
+  width: 35%;
+  padding: 14px;
 }
 
-.carousel__button.fancybox__button--close {
+#yakutia-map [data-animal-modal="1"] {
+  bottom: 10%;
+  right: 30%;
+}
+
+#yakutia-map [data-animal-modal="1"] .animal-modal__animal {
+  width: 10.87vw;
+  height: 11.44vw;
+  right: -13%;
+  bottom: -2%;
+}
+
+#yakutia-map .animal-modal__face {
+  margin-right: 16px;
+  flex-shrink: 0;
+  width: 24.7%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#yakutia-map .animal-modal__face img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+#yakutia-map .animal-modal__title {
+  font-family: "iowanoldstyle_bold";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.46vw;
+  line-height: 100%;
+  color: #604427;
+  margin-bottom: 0.7vw;
+}
+
+#yakutia-map .animal-modal__content {
+  max-width: 51.52%;
+}
+
+#yakutia-map .animal-modal__descr {
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.76vw;
+  line-height: 140%;
+  color: #333333;
+}
+
+#yakutia-map .animal-modal__animal {
   position: absolute;
-  right: 25px;
-  bottom: 25px;
-  background-color: #fff;
-  border-radius: 50%;
-  width: 63px;
-  height: 63px;
+  right: -15%;
+  bottom: 0;
+}
+
+#yakutia-map .animal-modal__close {
   cursor: pointer;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M19 32V19H32' stroke='%23604427' stroke-width='3'/%3e%3cpath d='M13 9.53674e-07L13 13L-7.15256e-07 13' stroke='%23604427' stroke-width='3'/%3e%3c/svg%3e ");
+  width: 1.27vw;
+  height: 1.27vw;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.41422 0.899414L1.03712e-05 2.31363L8.48536 10.799L0 19.2843L1.41421 20.6986L9.89958 12.2132L18.3848 20.6984L19.799 19.2842L11.3138 10.799L19.799 2.31378L18.3848 0.899565L9.89958 9.38476L1.41422 0.899414Z' fill='%23604427'/%3e%3c/svg%3e ");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 40%;
-}
-
-.carousel__button.fancybox__button--close svg {
-  display: none;
-}
-
-.fancybox__toolbar {
-  position: static !important;
+  background-size: contain;
 }
 
 @media (max-width: 1190px) {
