@@ -101,13 +101,68 @@
   .yakutia-map__body {
     position: relative;
   }
+
+  .show-map-btn {
+    position: absolute;
+    right: 3%;
+    top: 1.2%;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 4%;
+    height: 2.75%;
+    cursor: pointer;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 33%;
+      top: 33%;
+      width: 23%;
+      height: 23%;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 15V2H15' stroke='%23604427' stroke-width='3'/%3e%3c/svg%3e ");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 33%;
+      bottom: 33%;
+      width: 23%;
+      height: 23%;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13 9.53674e-07L13 13L-7.15256e-07 13' stroke='%23604427' stroke-width='3'/%3e%3c/svg%3e ");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    &::after,
+    &::before {
+      transition: left 0.3s ease, right 0.3s ease, top 0.3s ease,
+        bottom 0.3s ease;
+    }
+    &:hover {
+      &::before {
+        left: 30%;
+        top: 30%;
+      }
+      &::after {
+        right: 30%;
+        bottom: 30%;
+      }
+    }
+  }
   .clicable-img {
     position: absolute;
-    cursor: pointer;
-    transition: transform 0.25s ease-in-out;
-    will-change: transform;
-    &:hover {
-      transform: scale3d(1.05, 1.05, 1);
+    &:not(.not-clicable) {
+      cursor: pointer;
+      transition: transform 0.25s ease-in-out;
+      will-change: transform;
+      &:hover {
+        transform: scale3d(1.05, 1.05, 1);
+      }
     }
     img {
       width: 100%;
@@ -202,11 +257,13 @@
   .text-img {
     z-index: 2;
     position: absolute;
-    cursor: pointer;
-    transition: transform 0.25s ease-in-out;
-    will-change: transform;
-    &:hover {
-      transform: scale3d(1.05, 1.05, 1);
+    &:not(.not-clicable) {
+      cursor: pointer;
+      transition: transform 0.25s ease-in-out;
+      will-change: transform;
+      &:hover {
+        transform: scale3d(1.05, 1.05, 1);
+      }
     }
     img {
       width: 100%;
@@ -296,11 +353,13 @@
   .tube-img {
     z-index: 2;
     position: absolute;
-    cursor: pointer;
-    transition: transform 0.25s ease-in-out;
-    will-change: transform;
-    &:hover {
-      transform: scale3d(1.05, 1.05, 1);
+    &:not(.not-clicable) {
+      cursor: pointer;
+      transition: transform 0.25s ease-in-out;
+      will-change: transform;
+      &:hover {
+        transform: scale3d(1.05, 1.05, 1);
+      }
     }
     img {
       width: 100%;
@@ -362,4 +421,30 @@
     width: 4.4%;
     height: 2.15%;
   }
+}
+
+.carousel__button.fancybox__button--zoom,
+.carousel__button.fancybox__button--fullscreen {
+  display: none;
+}
+
+.carousel__button.fancybox__button--close {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 63px;
+  height: 63px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M19 32V19H32' stroke='%23604427' stroke-width='3'/%3e%3cpath d='M13 9.53674e-07L13 13L-7.15256e-07 13' stroke='%23604427' stroke-width='3'/%3e%3c/svg%3e ");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40%;
+  svg {
+    display: none;
+  }
+}
+.fancybox__toolbar {
+  position: static !important;
 }
