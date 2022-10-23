@@ -453,7 +453,7 @@
     z-index: 5;
     position: absolute;
     background: #ece8de;
-    border: 6px solid #ded8c8;
+    border: 0.38vw solid #ded8c8;
     width: 35%;
     padding: 14px;
     opacity: 0;
@@ -514,8 +514,8 @@
     width: 1.27vw;
     height: 1.27vw;
     position: absolute;
-    right: 15px;
-    top: 15px;
+    right: 1vw;
+    top: 1vw;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.41422 0.899414L1.03712e-05 2.31363L8.48536 10.799L0 19.2843L1.41421 20.6986L9.89958 12.2132L18.3848 20.6984L19.799 19.2842L11.3138 10.799L19.799 2.31378L18.3848 0.899565L9.89958 9.38476L1.41422 0.899414Z' fill='%23604427'/%3e%3c/svg%3e ");
     background-repeat: no-repeat;
     background-position: center;
