@@ -599,4 +599,30 @@
       bottom: 6%;
     }
   }
+
+  .animal-modal._small {
+    width: 30vw;
+    .animal-modal__face {
+      align-items: center;
+      width: 29.2%;
+    }
+  }
+  [data-animal-modal="7"] {
+    top: 13.6%;
+    left: 0.5%;
+    .animal-modal__content {
+      max-width: 62%;
+    }
+    .animal-modal__face img {
+      margin-bottom: 20%;
+    }
+  }
+
+  [data-animal-modal="8"] {
+    top: 19%;
+    left: 3%;
+    .animal-modal__content {
+      max-width: 62%;
+    }
+  }
 }
