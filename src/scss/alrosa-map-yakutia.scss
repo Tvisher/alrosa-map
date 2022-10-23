@@ -601,14 +601,14 @@
   }
 
   .animal-modal._small {
-    width: 30vw;
+    width: 28.5vw;
     .animal-modal__face {
       align-items: center;
       width: 29.2%;
     }
   }
   [data-animal-modal="7"] {
-    top: 13.6%;
+    top: 13.2%;
     left: 0.5%;
     .animal-modal__content {
       max-width: 62%;
@@ -619,8 +619,8 @@
   }
 
   [data-animal-modal="8"] {
-    top: 19%;
-    left: 3%;
+    top: 18.3%;
+    left: 3.5%;
     .animal-modal__content {
       max-width: 62%;
     }

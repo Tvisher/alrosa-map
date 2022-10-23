@@ -4718,7 +4718,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 #yakutia-map .animal-modal._small {
-  width: 30vw;
+  width: 28.5vw;
 }
 
 #yakutia-map .animal-modal._small .animal-modal__face {
@@ -4727,7 +4727,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 #yakutia-map [data-animal-modal="7"] {
-  top: 13.6%;
+  top: 13.2%;
   left: 0.5%;
 }
 
@@ -4740,8 +4740,8 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 #yakutia-map [data-animal-modal="8"] {
-  top: 19%;
-  left: 3%;
+  top: 18.3%;
+  left: 3.5%;
 }
 
 #yakutia-map [data-animal-modal="8"] .animal-modal__content {
