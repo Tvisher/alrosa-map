@@ -34,8 +34,10 @@
         </div>
         <div class="yakutia-map__body">
             <div class="show-map-btn" data-fancybox data-src="@img/zoom-map.jpg"></div>
-            <div class="map-container">
-                <img src="@img/map.jpg" alt="">
+            <div class="map-container" data-map-container data-large="@img/map.jpg">
+                <div class="map-container__preload">
+                    <img src="@img/small-map.jpg" alt="">
+                </div>
             </div>
 
             <div class="clicable-img" data-modal-img="1">
@@ -186,7 +188,7 @@
                 <img src="@img/diamonds.png" alt="">
             </div>
 
-            <!--start text images -->
+            <!--start text and tube images -->
 
             <div class="text-img not-clicable" data-modal-text="1">
                 <img src="@img/ebelah.png" alt="">
@@ -206,6 +208,19 @@
             <div class="tube-img" data-modal-tube="4">
                 <img src="@img/tube-2.png" alt="">
             </div>
+            <div class="animal-modal _small" data-tube-modal="4">
+                <div class="animal-modal__close"></div>
+                <div class="animal-modal__face">
+                    <img src="@img/tube-2.png" alt="">
+                </div>
+                <div class="animal-modal__content">
+                    <div class="animal-modal__title">Алмаз</div>
+                    <div class="animal-modal__descr">
+                        51,49 карата (2018),<br>
+                        трубка «Заполярная»
+                    </div>
+                </div>
+            </div>
 
             <div class="text-img not-clicable" data-modal-text="5">
                 <img src="@img/udachnaya.png" alt="">
@@ -220,7 +235,20 @@
             <div class="tube-img" data-modal-tube="6">
                 <img src="@img/tube-1.png" alt="">
             </div>
-
+            <div class="animal-modal _small" data-tube-modal="6">
+                <div class="animal-modal__close"></div>
+                <div class="animal-modal__face">
+                    <img src="@img/tube-1.png" alt="">
+                </div>
+                <div class="animal-modal__content">
+                    <div class="animal-modal__title">Алмаз</div>
+                    <div class="animal-modal__descr">
+                        «Город Вилюйск»,<br>
+                        235,16 карата (2013),<br>
+                        трубка «Юбилейная»
+                    </div>
+                </div>
+            </div>
 
             <div class="text-img not-clicable" data-modal-text="7">
                 <img src="@img/aihal.png" alt="">
@@ -234,6 +262,20 @@
             </div>
             <div class="tube-img" data-modal-tube="8">
                 <img src="@img/tube-3.png" alt="">
+            </div>
+            <div class="animal-modal _small" data-tube-modal="8">
+                <div class="animal-modal__close"></div>
+                <div class="animal-modal__face">
+                    <img src="@img/tube-3.png" alt="">
+                </div>
+                <div class="animal-modal__content">
+                    <div class="animal-modal__title">Алмаз</div>
+                    <div class="animal-modal__descr">
+                        «Борис Эйфман»,<br>
+                        214,65 карата (2016),<br>
+                        россыпь «Нюрбинская»
+                    </div>
+                </div>
             </div>
 
             <div class="text-img not-clicable" data-modal-text="9">
@@ -249,6 +291,19 @@
             <div class="tube-img" data-modal-tube="10">
                 <img src="@img/tube-4.png" alt="">
             </div>
+            <div class="animal-modal _small" data-tube-modal="10">
+                <div class="animal-modal__close"></div>
+                <div class="animal-modal__face">
+                    <img src="@img/tube-4.png" alt="">
+                </div>
+                <div class="animal-modal__content">
+                    <div class="animal-modal__title">Алмаз</div>
+                    <div class="animal-modal__descr">
+                        118,91 карата (2019),<br>
+                        трубка «Интернациональная»
+                    </div>
+                </div>
+            </div>
 
             <div class="text-img not-clicable" data-modal-text="11">
                 <img src="@img/mir.png" alt="">
@@ -256,8 +311,7 @@
             <div class="tube-img not-clicable" data-modal-tube="11">
                 <img src="@img/tube-1.png" alt="">
             </div>
-
-            <!--end text images -->
+            <!--end text and tube images -->
 
         </div>
         <div class="yakutia-map__footer">
@@ -265,30 +319,80 @@
             <p class="footer-text">** На карте указаны только самые крупные отрабатываемые месторождения. Так, на карте не указаны Зарница (около Удачного), Заря (около Айхала). </p>
             <p class="footer-text">*** Арт-проект не претендует на статус географической карты и не может ее заменить.</p>
         </div>
-    </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/4.0.31/fancybox.umd.js" integrity="sha512-KbN1/HGDfgCQ9jeSs8O4t3Jeq2Gxv24KTWveN9QKrk/84cm5fpU8ankouT5Nsa1Pmx4SNXHZhIavwYMmnb9yHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
+        <!-- скрипт fancybox -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/4.0.31/fancybox.umd.js" integrity="sha512-KbN1/HGDfgCQ9jeSs8O4t3Jeq2Gxv24KTWveN9QKrk/84cm5fpU8ankouT5Nsa1Pmx4SNXHZhIavwYMmnb9yHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script>
-        document.addEventListener('click', (e) => {
-            const target = e.target;
-            if (target.closest('[data-modal-img]')) {
-                const modalImgId = target.closest('[data-modal-img]').getAttribute('data-modal-img');
-                const animalModal = document.querySelector(`[data-animal-modal="${modalImgId}"]`);
-                if (animalModal) {
-                    const activeModalImg = document.querySelector('[data-animal-modal].show');
-                    if (activeModalImg) {
-                        activeModalImg.classList.remove('show');
+        <!-- Скрипт проекта -->
+        <script>
+            document.addEventListener('click', (e) => {
+                const target = e.target;
+                if (target.closest('[data-modal-img]')) {
+                    const modalImgId = target.closest('[data-modal-img]').getAttribute('data-modal-img');
+                    const animalModal = document.querySelector(`[data-animal-modal="${modalImgId}"]`);
+                    if (animalModal) {
+                        const activeModalImg = document.querySelector('.animal-modal.show');
+                        if (activeModalImg) {
+                            activeModalImg.classList.remove('show');
+                        }
+                        animalModal.classList.add('show');
                     }
-                    animalModal.classList.add('show');
                 }
+
+                if (target.closest('[data-modal-tube]')) {
+                    const modalImgId = target.closest('[data-modal-tube]').getAttribute('data-modal-tube');
+                    const tubeModal = document.querySelector(`[data-tube-modal="${modalImgId}"]`);
+                    if (tubeModal) {
+                        const activeModalImg = document.querySelector('.animal-modal.show');
+                        if (activeModalImg) {
+                            activeModalImg.classList.remove('show');
+                        }
+                        tubeModal.classList.add('show');
+                    }
+                }
+
+                if (target.closest('[data-modal-text]')) {
+                    const modalImgId = target.closest('[data-modal-text]').getAttribute('data-modal-text');
+                    const tubeModal = document.querySelector(`[data-tube-modal="${modalImgId}"]`);
+                    if (tubeModal) {
+                        const activeModalImg = document.querySelector('.animal-modal.show');
+                        if (activeModalImg) {
+                            activeModalImg.classList.remove('show');
+                        }
+                        tubeModal.classList.add('show');
+                    }
+                }
+
+                if (target.closest('.animal-modal__close')) {
+                    target.closest('.animal-modal').classList.remove('show');
+                }
+            });
+
+            function ImageBg(bg, smallImg) {
+                // 1: load small image and show it 
+                let img = new Image();
+                img.src = smallImg.src;
+                img.onload = function () {
+                    smallImg.classList.add('loaded');
+                };
+                // 2: load large image 
+                let imgLarge = new Image();
+                imgLarge.src = bg.dataset.large;
+                imgLarge.onload = function () {
+                    console.log();
+                    imgLarge.parentElement.querySelector('.map-container__preload').classList.add('loaded');
+                };
+                bg.appendChild(imgLarge);
             }
-            if (target.closest('.animal-modal__close')) {
-                target.closest('.animal-modal').classList.remove('show');
-            }
-        });
-    </script>
+
+            let largeImage = document.querySelector('[data-map-container]'),
+                blurImgSmall = largeImage.querySelector('.map-container__preload img');
+            new ImageBg(largeImage, blurImgSmall);
+        </script>
+    </section>
+
+
 </body>
 
 </html>

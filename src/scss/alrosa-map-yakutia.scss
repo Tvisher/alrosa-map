@@ -99,9 +99,29 @@
   }
   .map-container {
     width: 100%;
+    height: 144.94vw;
     img {
       width: 100%;
       height: 100%;
+    }
+  }
+  .map-container__preload {
+    overflow: hidden;
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    img {
+      filter: blur(5px);
+      width: 100%;
+      height: 100%;
+    }
+    &.loaded {
+      opacity: 0;
+      visibility: hidden;
     }
   }
   .yakutia-map__footer {
@@ -109,8 +129,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 36px;
-    padding-bottom: 67px;
+    padding: 67px 20px 67px 20px;
   }
   .footer-text {
     max-width: 846px;
@@ -166,8 +185,8 @@
 
     &::after,
     &::before {
-      transition: left 0.3s ease, right 0.3s ease, top 0.3s ease,
-        bottom 0.3s ease;
+      transition: left 0.2s ease, right 0.2s ease, top 0.2s ease,
+        bottom 0.2s ease;
     }
     &:hover {
       &::before {
@@ -458,10 +477,13 @@
     padding: 14px;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+    transform: translateY(10%);
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out,
+      transform 0.35s ease-in-out;
     &.show {
       opacity: 1;
       visibility: visible;
+      transform: translateY(0%);
     }
   }
 
@@ -624,5 +646,32 @@
     .animal-modal__content {
       max-width: 62%;
     }
+  }
+
+  [data-tube-modal] {
+    min-height: 10.37vw;
+    .animal-modal__descr {
+      font-size: 1vw;
+    }
+  }
+
+  [data-tube-modal="4"] {
+    top: 51.3%;
+    left: 10.5%;
+  }
+
+  [data-tube-modal="6"] {
+    top: 61.7%;
+    left: 0.5%;
+  }
+
+  [data-tube-modal="8"] {
+    top: 63%;
+    left: 17.5%;
+  }
+
+  [data-tube-modal="10"] {
+    bottom: 3%;
+    left: 2%;
   }
 }

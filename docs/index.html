@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitename</title>
     <!-- Styles -->
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/main.min.css?_v=20221023190646">
     <script> </script>
 </head>
 
@@ -16,7 +16,7 @@
     <section id="yakutia-map" class="yakutia-map">
         <div class="yakutia-map__head">
             <div class="image-container">
-                <img src="img/yakutia-map-head.png" alt="">
+                <picture><source srcset="img/yakutia-map-head.webp" type="image/webp"><img src="img/yakutia-map-head.png" alt=""></picture>
             </div>
             <h1 class="yakutia-map__title">Якутия</h1>
             <p class="yakutia-map__descr">Мы&nbsp;живем и&nbsp;работаем на&nbsp;уникальной земле. Якутия не&nbsp;только край древних минералов&nbsp;&mdash; свидетелей миграции континентов и&nbsp;появления цивилизаций, но&nbsp;и&nbsp;родина потрясающих животных, воскресением которых грезит научный мир. Местные жители нередко находят кости и&nbsp;бивни мамонтов. Такие находки попадались и&nbsp;специалистам самых северных алмазных россыпей, расположенных в&nbsp;сотнях километров от&nbsp;полярного круга. Алмазодобычу там ведет дочерняя компания АЛРОСА &laquo;Алмазы Анабара&raquo;. </p>
@@ -24,7 +24,7 @@
             <p class="yakutia-map__quote">&laquo;Во&nbsp;время летних полевых работ, а&nbsp;также зимой в&nbsp;подготовительный сезон на&nbsp;урезах рек нам случалось находить кости мамонтов. Особенно запомнился 2007&nbsp;год, когда мы&nbsp;проводили геологоразведку у&nbsp;моря Лаптевых.<br> По&nbsp;алмазоносности территория оказалась неперспективной, зато мы&nbsp;наткнулись на&nbsp;следы удивительных древних животных,&nbsp;&mdash; рассказывает главный геолог &bdquo;Алмазов Анабара&ldquo; Роман Желонкин. &mdash;&nbsp;А&nbsp;некоторые представители мамонтовой фауны&nbsp;&mdash; овцебыки и&nbsp;бизоны&nbsp;&mdash; бродят и&nbsp;сегодня по&nbsp;Якутии, как в&nbsp;доисторические времена. Животных алмазного края Якутии мы&nbsp;называем &bdquo;живыми алмазами&ldquo; и&nbsp;поддерживаем программу восстановления их&nbsp;популяции&raquo;. С&nbsp;художницей Викторией Мезеновой мы&nbsp;составили карту месторождений<br> и&nbsp;соседствующих с&nbsp;ними чудес алмазной долины.</p>
             <div class="auth">
                 <div class="auth__image">
-                    <img height="2280px" src="img/auth.jpg" alt="">
+                    <picture><source srcset="img/auth.webp" type="image/webp"><img height="2280px" src="img/auth.jpg" alt=""></picture>
                 </div>
                 <div class="auth__desr">
                     ВИКТОРИЯ МЕЗЕНОВА<br>
@@ -34,85 +34,87 @@
         </div>
         <div class="yakutia-map__body">
             <div class="show-map-btn" data-fancybox data-src="img/zoom-map.jpg"></div>
-            <div class="map-container">
-                <img src="img/map.jpg" alt="">
+            <div class="map-container" data-map-container data-large="img/map.jpg">
+                <div class="map-container__preload">
+                    <picture><source srcset="img/small-map.webp" type="image/webp"><img src="img/small-map.jpg" alt=""></picture>
+                </div>
             </div>
 
             <div class="clicable-img" data-modal-img="1">
-                <img src="img/musk-ox.png" alt="">
+                <picture><source srcset="img/musk-ox.webp" type="image/webp"><img src="img/musk-ox.png" alt=""></picture>
             </div>
             <div class="animal-modal" data-animal-modal="1">
                 <div class="animal-modal__close"></div>
                 <div class="animal-modal__face">
-                    <img src="img/musk-ox-face.png" alt="">
+                    <picture><source srcset="img/musk-ox-face.webp" type="image/webp"><img src="img/musk-ox-face.png" alt=""></picture>
                 </div>
                 <div class="animal-modal__content">
                     <div class="animal-modal__title">Овцебык</div>
                     <div class="animal-modal__descr">В Сибири овцебыки вымерли 3–4 тысячи лет назад. Их начали заново расселять в арктической зоне Азии в 1970-х годах. Зимой 2020 года рабочие АЛРОСА повстречали овцебыка недалеко от дороги, соединяющей месторождение Верхняя Муна и Удачнинский горно-обогатительный комбинат. Экологический центр АЛРОСА разослал сообщение всем работникам Якутии с разъяснением о том, как вести себя со зверем, чтобы ему не навредить.</div>
                 </div>
                 <div class="animal-modal__animal">
-                    <img src="img/musk-ox-modal.png" alt="">
+                    <picture><source srcset="img/musk-ox-modal.webp" type="image/webp"><img src="img/musk-ox-modal.png" alt=""></picture>
                 </div>
             </div>
 
             <div class="clicable-img" data-modal-img="2">
-                <img src="img/mammoth.png" alt="">
+                <picture><source srcset="img/mammoth.webp" type="image/webp"><img src="img/mammoth.png" alt=""></picture>
             </div>
             <div class="animal-modal" data-animal-modal="2">
                 <div class="animal-modal__close"></div>
                 <div class="animal-modal__face">
-                    <img src="img/mammoth-face.png" alt="">
+                    <picture><source srcset="img/mammoth-face.webp" type="image/webp"><img src="img/mammoth-face.png" alt=""></picture>
                 </div>
                 <div class="animal-modal__content">
                     <div class="animal-modal__title">Мамонт</div>
                     <div class="animal-modal__descr">Жители Якутии регулярно находят кости и бивни этих грандиозных доисторических животных. Такие находки также нередки и на заполярных алмазных приисках.</div>
                 </div>
                 <div class="animal-modal__animal">
-                    <img src="img/mammoth.png" alt="">
+                    <picture><source srcset="img/mammoth.webp" type="image/webp"><img src="img/mammoth.png" alt=""></picture>
                 </div>
             </div>
 
             <div class="clicable-img" data-modal-img="3">
-                <img src="img/arctic-fox.png" alt="">
+                <picture><source srcset="img/arctic-fox.webp" type="image/webp"><img src="img/arctic-fox.png" alt=""></picture>
             </div>
             <div class="animal-modal" data-animal-modal="3">
                 <div class="animal-modal__close"></div>
                 <div class="animal-modal__face">
-                    <img src="img/arctic-fox-face.png" alt="">
+                    <picture><source srcset="img/arctic-fox-face.webp" type="image/webp"><img src="img/arctic-fox-face.png" alt=""></picture>
                 </div>
                 <div class="animal-modal__content">
                     <div class="animal-modal__title">Песец</div>
                     <div class="animal-modal__descr">Также его называют арктической, или полярной, лисицей. Питается в основном леммингами, которых бывает в избытке летом. Один норный комплекс песца может простираться больше чем на 46 кв. метров и иметь 100 входов.</div>
                 </div>
                 <div class="animal-modal__animal">
-                    <img src="img/arctic-fox.png" alt="">
+                    <picture><source srcset="img/arctic-fox.webp" type="image/webp"><img src="img/arctic-fox.png" alt=""></picture>
                 </div>
             </div>
 
             <div class="clicable-img" data-modal-img="4">
-                <img src="img/wolverine.png" alt="">
+                <picture><source srcset="img/wolverine.webp" type="image/webp"><img src="img/wolverine.png" alt=""></picture>
             </div>
             <div class="animal-modal" data-animal-modal="4">
                 <div class="animal-modal__close"></div>
                 <div class="animal-modal__face">
-                    <img src="img/wolverine-face.png" alt="">
+                    <picture><source srcset="img/wolverine-face.webp" type="image/webp"><img src="img/wolverine-face.png" alt=""></picture>
                 </div>
                 <div class="animal-modal__content">
                     <div class="animal-modal__title">Росомаха</div>
                     <div class="animal-modal__descr">Этого зверя часто сравнивают с медведем, но на самом деле она родственник ласки, семейства куньих. Росомаха известна своей свирепостью. При небольших размерах (длина тела до 84 см) может, защищая свою территорию, атаковать медведя или волка. Помимо птиц, грызунов, рептилий, рыбы и падали в ее рацион входят ягоды</div>
                 </div>
                 <div class="animal-modal__animal">
-                    <img src="img/wolverine.png" alt="">
+                    <picture><source srcset="img/wolverine.webp" type="image/webp"><img src="img/wolverine.png" alt=""></picture>
                 </div>
             </div>
 
             <div class="clicable-img" data-modal-img="5">
-                <img src="img/reindeer.png" alt="">
+                <picture><source srcset="img/reindeer.webp" type="image/webp"><img src="img/reindeer.png" alt=""></picture>
             </div>
             <div class="animal-modal" data-animal-modal="5">
                 <div class="animal-modal__close"></div>
                 <div class="animal-modal__face">
-                    <img src="img/reindeer-face.png" alt="">
+                    <picture><source srcset="img/reindeer-face.webp" type="image/webp"><img src="img/reindeer-face.png" alt=""></picture>
                 </div>
                 <div class="animal-modal__content">
                     <div class="animal-modal__title">Северный олень</div>
@@ -120,34 +122,34 @@
                         Жители Якутии регулярно находят кости и бивни этих грандиозных доисторических животных. Такие находки также нередки и на заполяр- ных алмазных приисках.</div>
                 </div>
                 <div class="animal-modal__animal">
-                    <img src="img/reindeer.png" alt="">
+                    <picture><source srcset="img/reindeer.webp" type="image/webp"><img src="img/reindeer.png" alt=""></picture>
                 </div>
             </div>
 
             <div class="clicable-img" data-modal-img="6">
-                <img src="img/bizon.png" alt="">
+                <picture><source srcset="img/bizon.webp" type="image/webp"><img src="img/bizon.png" alt=""></picture>
             </div>
             <div class="animal-modal" data-animal-modal="6">
                 <div class="animal-modal__close"></div>
                 <div class="animal-modal__face">
-                    <img src="img/bizon-face.png" alt="">
+                    <picture><source srcset="img/bizon-face.webp" type="image/webp"><img src="img/bizon-face.png" alt=""></picture>
                 </div>
                 <div class="animal-modal__content">
                     <div class="animal-modal__title">Бизон</div>
                     <div class="animal-modal__descr">Эти могучие быки тоже вымерли в Сибири.<br> В 2006 году началась программа реинтродукции – восстановления исторического ареала бизонов. Из Канады в Якутию завезли четыре партии лесных бизонов по 30 голов. Четвертую партию доставили в апреле 2020 года. С 2014 года бизоны обитают в том числе и в парке «Живые алмазы Якутии», недалеко от города Мирный, алмазной столицы России. Этот парк финансирует АЛРОСА.</div>
                 </div>
                 <div class="animal-modal__animal">
-                    <img src="img/bizon-modal.png" alt="">
+                    <picture><source srcset="img/bizon-modal.webp" type="image/webp"><img src="img/bizon-modal.png" alt=""></picture>
                 </div>
             </div>
 
             <div class="clicable-img" data-modal-img="7">
-                <img src="img/crater.png" alt="">
+                <picture><source srcset="img/crater.webp" type="image/webp"><img src="img/crater.png" alt=""></picture>
             </div>
             <div class="animal-modal _small" data-animal-modal="7">
                 <div class="animal-modal__close"></div>
                 <div class="animal-modal__face">
-                    <img src="img/crater.png" alt="">
+                    <picture><source srcset="img/crater.webp" type="image/webp"><img src="img/crater.png" alt=""></picture>
                 </div>
                 <div class="animal-modal__content">
                     <div class="animal-modal__title">Попигайский кратер</div>
@@ -156,12 +158,12 @@
             </div>
 
             <div class="clicable-img" data-modal-img="8">
-                <img src="img/yellow-diamond.png" alt="">
+                <picture><source srcset="img/yellow-diamond.webp" type="image/webp"><img src="img/yellow-diamond.png" alt=""></picture>
             </div>
             <div class="animal-modal _small" data-animal-modal="8">
                 <div class="animal-modal__close"></div>
                 <div class="animal-modal__face">
-                    <img src="img/yellow-diamond.png" alt="">
+                    <picture><source srcset="img/yellow-diamond.webp" type="image/webp"><img src="img/yellow-diamond.png" alt=""></picture>
                 </div>
                 <div class="animal-modal__content">
                     <div class="animal-modal__title">«Алмазы Анабара»</div>
@@ -171,93 +173,145 @@
             </div>
 
             <div class="clicable-img not-clicable" data-modal-img="9">
-                <img src="img/diamonds.png" alt="">
+                <picture><source srcset="img/diamonds.webp" type="image/webp"><img src="img/diamonds.png" alt=""></picture>
             </div>
 
             <div class="clicable-img not-clicable" data-modal-img="10">
-                <img src="img/diamonds.png" alt="">
+                <picture><source srcset="img/diamonds.webp" type="image/webp"><img src="img/diamonds.png" alt=""></picture>
             </div>
 
             <div class="clicable-img not-clicable" data-modal-img="11">
-                <img src="img/diamonds.png" alt="">
+                <picture><source srcset="img/diamonds.webp" type="image/webp"><img src="img/diamonds.png" alt=""></picture>
             </div>
 
             <div class="clicable-img not-clicable" data-modal-img="12">
-                <img src="img/diamonds.png" alt="">
+                <picture><source srcset="img/diamonds.webp" type="image/webp"><img src="img/diamonds.png" alt=""></picture>
             </div>
 
-            <!--start text images -->
+            <!--start text and tube images -->
 
             <div class="text-img not-clicable" data-modal-text="1">
-                <img src="img/ebelah.png" alt="">
+                <picture><source srcset="img/ebelah.webp" type="image/webp"><img src="img/ebelah.png" alt=""></picture>
             </div>
 
             <div class="text-img not-clicable" data-modal-text="2">
-                <img src="img/talahtah.png" alt="">
+                <picture><source srcset="img/talahtah.webp" type="image/webp"><img src="img/talahtah.png" alt=""></picture>
             </div>
 
             <div class="text-img not-clicable" data-modal-text="3">
-                <img src="img/molodo.png" alt="">
+                <picture><source srcset="img/molodo.webp" type="image/webp"><img src="img/molodo.png" alt=""></picture>
             </div>
 
             <div class="text-img" data-modal-text="4">
-                <img src="img/zapolyarnaya.png" alt="">
+                <picture><source srcset="img/zapolyarnaya.webp" type="image/webp"><img src="img/zapolyarnaya.png" alt=""></picture>
             </div>
             <div class="tube-img" data-modal-tube="4">
-                <img src="img/tube-2.png" alt="">
+                <picture><source srcset="img/tube-2.webp" type="image/webp"><img src="img/tube-2.png" alt=""></picture>
+            </div>
+            <div class="animal-modal _small" data-tube-modal="4">
+                <div class="animal-modal__close"></div>
+                <div class="animal-modal__face">
+                    <picture><source srcset="img/tube-2.webp" type="image/webp"><img src="img/tube-2.png" alt=""></picture>
+                </div>
+                <div class="animal-modal__content">
+                    <div class="animal-modal__title">Алмаз</div>
+                    <div class="animal-modal__descr">
+                        51,49 карата (2018),<br>
+                        трубка «Заполярная»
+                    </div>
+                </div>
             </div>
 
             <div class="text-img not-clicable" data-modal-text="5">
-                <img src="img/udachnaya.png" alt="">
+                <picture><source srcset="img/udachnaya.webp" type="image/webp"><img src="img/udachnaya.png" alt=""></picture>
             </div>
             <div class="tube-img not-clicable" data-modal-tube="5">
-                <img src="img/tube-1.png" alt="">
+                <picture><source srcset="img/tube-1.webp" type="image/webp"><img src="img/tube-1.png" alt=""></picture>
             </div>
 
             <div class="text-img" data-modal-text="6">
-                <img src="img/ubileinaya.png" alt="">
+                <picture><source srcset="img/ubileinaya.webp" type="image/webp"><img src="img/ubileinaya.png" alt=""></picture>
             </div>
             <div class="tube-img" data-modal-tube="6">
-                <img src="img/tube-1.png" alt="">
+                <picture><source srcset="img/tube-1.webp" type="image/webp"><img src="img/tube-1.png" alt=""></picture>
             </div>
-
+            <div class="animal-modal _small" data-tube-modal="6">
+                <div class="animal-modal__close"></div>
+                <div class="animal-modal__face">
+                    <picture><source srcset="img/tube-1.webp" type="image/webp"><img src="img/tube-1.png" alt=""></picture>
+                </div>
+                <div class="animal-modal__content">
+                    <div class="animal-modal__title">Алмаз</div>
+                    <div class="animal-modal__descr">
+                        «Город Вилюйск»,<br>
+                        235,16 карата (2013),<br>
+                        трубка «Юбилейная»
+                    </div>
+                </div>
+            </div>
 
             <div class="text-img not-clicable" data-modal-text="7">
-                <img src="img/aihal.png" alt="">
+                <picture><source srcset="img/aihal.webp" type="image/webp"><img src="img/aihal.png" alt=""></picture>
             </div>
             <div class="tube-img not-clicable" data-modal-tube="7">
-                <img src="img/tube-1.png" alt="">
+                <picture><source srcset="img/tube-1.webp" type="image/webp"><img src="img/tube-1.png" alt=""></picture>
             </div>
 
             <div class="text-img" data-modal-text="8">
-                <img src="img/nubinskaya.png" alt="">
+                <picture><source srcset="img/nubinskaya.webp" type="image/webp"><img src="img/nubinskaya.png" alt=""></picture>
             </div>
             <div class="tube-img" data-modal-tube="8">
-                <img src="img/tube-3.png" alt="">
+                <picture><source srcset="img/tube-3.webp" type="image/webp"><img src="img/tube-3.png" alt=""></picture>
+            </div>
+            <div class="animal-modal _small" data-tube-modal="8">
+                <div class="animal-modal__close"></div>
+                <div class="animal-modal__face">
+                    <picture><source srcset="img/tube-3.webp" type="image/webp"><img src="img/tube-3.png" alt=""></picture>
+                </div>
+                <div class="animal-modal__content">
+                    <div class="animal-modal__title">Алмаз</div>
+                    <div class="animal-modal__descr">
+                        «Борис Эйфман»,<br>
+                        214,65 карата (2016),<br>
+                        россыпь «Нюрбинская»
+                    </div>
+                </div>
             </div>
 
             <div class="text-img not-clicable" data-modal-text="9">
-                <img src="img/botuobinskaya.png" alt="">
+                <picture><source srcset="img/botuobinskaya.webp" type="image/webp"><img src="img/botuobinskaya.png" alt=""></picture>
             </div>
             <div class="tube-img not-clicable" data-modal-tube="9">
-                <img src="img/tube-1.png" alt="">
+                <picture><source srcset="img/tube-1.webp" type="image/webp"><img src="img/tube-1.png" alt=""></picture>
             </div>
 
             <div class="text-img" data-modal-text="10">
-                <img src="img/international.png" alt="">
+                <picture><source srcset="img/international.webp" type="image/webp"><img src="img/international.png" alt=""></picture>
             </div>
             <div class="tube-img" data-modal-tube="10">
-                <img src="img/tube-4.png" alt="">
+                <picture><source srcset="img/tube-4.webp" type="image/webp"><img src="img/tube-4.png" alt=""></picture>
+            </div>
+            <div class="animal-modal _small" data-tube-modal="10">
+                <div class="animal-modal__close"></div>
+                <div class="animal-modal__face">
+                    <picture><source srcset="img/tube-4.webp" type="image/webp"><img src="img/tube-4.png" alt=""></picture>
+                </div>
+                <div class="animal-modal__content">
+                    <div class="animal-modal__title">Алмаз</div>
+                    <div class="animal-modal__descr">
+                        118,91 карата (2019),<br>
+                        трубка «Интернациональная»
+                    </div>
+                </div>
             </div>
 
             <div class="text-img not-clicable" data-modal-text="11">
-                <img src="img/mir.png" alt="">
+                <picture><source srcset="img/mir.webp" type="image/webp"><img src="img/mir.png" alt=""></picture>
             </div>
             <div class="tube-img not-clicable" data-modal-tube="11">
-                <img src="img/tube-1.png" alt="">
+                <picture><source srcset="img/tube-1.webp" type="image/webp"><img src="img/tube-1.png" alt=""></picture>
             </div>
-
-            <!--end text images -->
+            <!--end text and tube images -->
 
         </div>
         <div class="yakutia-map__footer">
@@ -265,30 +319,80 @@
             <p class="footer-text">** На карте указаны только самые крупные отрабатываемые месторождения. Так, на карте не указаны Зарница (около Удачного), Заря (около Айхала). </p>
             <p class="footer-text">*** Арт-проект не претендует на статус географической карты и не может ее заменить.</p>
         </div>
-    </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/4.0.31/fancybox.umd.js" integrity="sha512-KbN1/HGDfgCQ9jeSs8O4t3Jeq2Gxv24KTWveN9QKrk/84cm5fpU8ankouT5Nsa1Pmx4SNXHZhIavwYMmnb9yHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
+        <!-- скрипт fancybox -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/4.0.31/fancybox.umd.js?_v=20221023190646" integrity="sha512-KbN1/HGDfgCQ9jeSs8O4t3Jeq2Gxv24KTWveN9QKrk/84cm5fpU8ankouT5Nsa1Pmx4SNXHZhIavwYMmnb9yHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script>
-        document.addEventListener('click', (e) => {
-            const target = e.target;
-            if (target.closest('[data-modal-img]')) {
-                const modalImgId = target.closest('[data-modal-img]').getAttribute('data-modal-img');
-                const animalModal = document.querySelector(`[data-animal-modal="${modalImgId}"]`);
-                if (animalModal) {
-                    const activeModalImg = document.querySelector('[data-animal-modal].show');
-                    if (activeModalImg) {
-                        activeModalImg.classList.remove('show');
+        <!-- Скрипт проекта -->
+        <script>
+            document.addEventListener('click', (e) => {
+                const target = e.target;
+                if (target.closest('[data-modal-img]')) {
+                    const modalImgId = target.closest('[data-modal-img]').getAttribute('data-modal-img');
+                    const animalModal = document.querySelector(`[data-animal-modal="${modalImgId}"]`);
+                    if (animalModal) {
+                        const activeModalImg = document.querySelector('.animal-modal.show');
+                        if (activeModalImg) {
+                            activeModalImg.classList.remove('show');
+                        }
+                        animalModal.classList.add('show');
                     }
-                    animalModal.classList.add('show');
                 }
+
+                if (target.closest('[data-modal-tube]')) {
+                    const modalImgId = target.closest('[data-modal-tube]').getAttribute('data-modal-tube');
+                    const tubeModal = document.querySelector(`[data-tube-modal="${modalImgId}"]`);
+                    if (tubeModal) {
+                        const activeModalImg = document.querySelector('.animal-modal.show');
+                        if (activeModalImg) {
+                            activeModalImg.classList.remove('show');
+                        }
+                        tubeModal.classList.add('show');
+                    }
+                }
+
+                if (target.closest('[data-modal-text]')) {
+                    const modalImgId = target.closest('[data-modal-text]').getAttribute('data-modal-text');
+                    const tubeModal = document.querySelector(`[data-tube-modal="${modalImgId}"]`);
+                    if (tubeModal) {
+                        const activeModalImg = document.querySelector('.animal-modal.show');
+                        if (activeModalImg) {
+                            activeModalImg.classList.remove('show');
+                        }
+                        tubeModal.classList.add('show');
+                    }
+                }
+
+                if (target.closest('.animal-modal__close')) {
+                    target.closest('.animal-modal').classList.remove('show');
+                }
+            });
+
+            function ImageBg(bg, smallImg) {
+                // 1: load small image and show it 
+                let img = new Image();
+                img.src = smallImg.src;
+                img.onload = function () {
+                    smallImg.classList.add('loaded');
+                };
+                // 2: load large image 
+                let imgLarge = new Image();
+                imgLarge.src = bg.dataset.large;
+                imgLarge.onload = function () {
+                    console.log();
+                    imgLarge.parentElement.querySelector('.map-container__preload').classList.add('loaded');
+                };
+                bg.appendChild(imgLarge);
             }
-            if (target.closest('.animal-modal__close')) {
-                target.closest('.animal-modal').classList.remove('show');
-            }
-        });
-    </script>
+
+            let largeImage = document.querySelector('[data-map-container]'),
+                blurImgSmall = largeImage.querySelector('.map-container__preload img');
+            new ImageBg(largeImage, blurImgSmall);
+        </script>
+    </section>
+
+
 </body>
 
 </html>
