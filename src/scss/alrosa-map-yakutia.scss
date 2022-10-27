@@ -200,6 +200,7 @@
     }
   }
   .clicable-img {
+    animation: shake 5s ease-in-out infinite 3s;
     position: absolute;
     &:not(.not-clicable) {
       cursor: pointer;
