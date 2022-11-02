@@ -2067,6 +2067,16 @@ body {
   color: #333333;
 }
 
+@-webkit-keyframes toOpac {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes toOpac {
   0% {
     opacity: 0;
@@ -2074,6 +2084,16 @@ body {
 
   100% {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes loading {
+  0% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
   }
 }
 
@@ -2465,7 +2485,8 @@ body {
 
 #harvestSeason .harvest-season__slides[data-step="3"] [data-slide="2"] .painting__nameplate.step-2 {
   display: block;
-  animation: toOpac 0.9s ease-in-out forwards 0.5s;
+  -webkit-animation: toOpac 0.9s ease-in-out forwards 0.5s;
+          animation: toOpac 0.9s ease-in-out forwards 0.5s;
 }
 
 #harvestSeason .harvest-season__slides[data-step="3"] [data-slide="2"] .briliant {
@@ -3279,11 +3300,13 @@ body {
 
 .carousel.is-draggable {
   cursor: move;
+  cursor: -webkit-grab;
   cursor: grab;
 }
 
 .carousel.is-dragging {
   cursor: move;
+  cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
@@ -3602,7 +3625,8 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .fancybox__spinner svg {
-  animation: fancybox-rotate 2s linear infinite;
+  -webkit-animation: fancybox-rotate 2s linear infinite;
+          animation: fancybox-rotate 2s linear infinite;
   transform-origin: center center;
   position: absolute;
   top: 0;
@@ -3620,14 +3644,38 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   stroke-miterlimit: 10;
   stroke-dasharray: 1, 200;
   stroke-dashoffset: 0;
-  animation: fancybox-dash 1.5s ease-in-out infinite;
+  -webkit-animation: fancybox-dash 1.5s ease-in-out infinite;
+          animation: fancybox-dash 1.5s ease-in-out infinite;
   stroke-linecap: round;
   stroke: currentColor;
+}
+
+@-webkit-keyframes fancybox-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes fancybox-rotate {
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes fancybox-dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
   }
 }
 
@@ -3661,7 +3709,8 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 .fancybox__container.is-animated[aria-hidden=false] .fancybox__backdrop,
 .fancybox__container.is-animated[aria-hidden=false] .fancybox__caption,
 .fancybox__container.is-animated[aria-hidden=false] .fancybox__nav {
-  animation: 0.15s ease backwards fancybox-fadeIn;
+  -webkit-animation: 0.15s ease backwards fancybox-fadeIn;
+          animation: 0.15s ease backwards fancybox-fadeIn;
 }
 
 .fancybox__container.is-animated.is-closing .carousel__button.is-close,
@@ -3669,31 +3718,48 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 .fancybox__container.is-animated.is-closing .fancybox__backdrop,
 .fancybox__container.is-animated.is-closing .fancybox__caption,
 .fancybox__container.is-animated.is-closing .fancybox__nav {
-  animation: 0.15s ease both fancybox-fadeOut;
+  -webkit-animation: 0.15s ease both fancybox-fadeOut;
+          animation: 0.15s ease both fancybox-fadeOut;
 }
 
 .fancybox-fadeIn {
-  animation: 0.15s ease both fancybox-fadeIn;
+  -webkit-animation: 0.15s ease both fancybox-fadeIn;
+          animation: 0.15s ease both fancybox-fadeIn;
 }
 
 .fancybox-fadeOut {
-  animation: 0.1s ease both fancybox-fadeOut;
+  -webkit-animation: 0.1s ease both fancybox-fadeOut;
+          animation: 0.1s ease both fancybox-fadeOut;
 }
 
 .fancybox-zoomInUp {
-  animation: 0.2s ease both fancybox-zoomInUp;
+  -webkit-animation: 0.2s ease both fancybox-zoomInUp;
+          animation: 0.2s ease both fancybox-zoomInUp;
 }
 
 .fancybox-zoomOutDown {
-  animation: 0.15s ease both fancybox-zoomOutDown;
+  -webkit-animation: 0.15s ease both fancybox-zoomOutDown;
+          animation: 0.15s ease both fancybox-zoomOutDown;
 }
 
 .fancybox-throwOutUp {
-  animation: 0.15s ease both fancybox-throwOutUp;
+  -webkit-animation: 0.15s ease both fancybox-throwOutUp;
+          animation: 0.15s ease both fancybox-throwOutUp;
 }
 
 .fancybox-throwOutDown {
-  animation: 0.15s ease both fancybox-throwOutDown;
+  -webkit-animation: 0.15s ease both fancybox-throwOutDown;
+          animation: 0.15s ease both fancybox-throwOutDown;
+}
+
+@-webkit-keyframes fancybox-fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fancybox-fadeIn {
@@ -3706,9 +3772,27 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   }
 }
 
+@-webkit-keyframes fancybox-fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
 @keyframes fancybox-fadeOut {
   to {
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes fancybox-zoomInUp {
+  from {
+    transform: scale(0.97) translate3d(0, 16px, 0);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) translate3d(0, 0, 0);
+    opacity: 1;
   }
 }
 
@@ -3724,6 +3808,13 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   }
 }
 
+@-webkit-keyframes fancybox-zoomOutDown {
+  to {
+    transform: scale(0.97) translate3d(0, 16px, 0);
+    opacity: 0;
+  }
+}
+
 @keyframes fancybox-zoomOutDown {
   to {
     transform: scale(0.97) translate3d(0, 16px, 0);
@@ -3731,9 +3822,23 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   }
 }
 
+@-webkit-keyframes fancybox-throwOutUp {
+  to {
+    transform: translate3d(0, -30%, 0);
+    opacity: 0;
+  }
+}
+
 @keyframes fancybox-throwOutUp {
   to {
     transform: translate3d(0, -30%, 0);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fancybox-throwOutDown {
+  to {
+    transform: translate3d(0, 30%, 0);
     opacity: 0;
   }
 }
@@ -3768,12 +3873,14 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 .fancybox__carousel.is-draggable .fancybox__slide,
 .fancybox__carousel.is-draggable .fancybox__slide .fancybox__content {
   cursor: move;
+  cursor: -webkit-grab;
   cursor: grab;
 }
 
 .fancybox__carousel.is-dragging .fancybox__slide,
 .fancybox__carousel.is-dragging .fancybox__slide .fancybox__content {
   cursor: move;
+  cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
@@ -3791,11 +3898,13 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 
 .fancybox__carousel .fancybox__slide.is-draggable .fancybox__content {
   cursor: move;
+  cursor: -webkit-grab;
   cursor: grab;
 }
 
 .fancybox__carousel .fancybox__slide.is-dragging .fancybox__content {
   cursor: move;
+  cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 
@@ -3933,7 +4042,8 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .fancybox__container.is-animated[aria-hidden=false] .fancybox__thumbs {
-  animation: 0.15s ease-in backwards fancybox-fadeIn;
+  -webkit-animation: 0.15s ease-in backwards fancybox-fadeIn;
+          animation: 0.15s ease-in backwards fancybox-fadeIn;
 }
 
 .fancybox__container.is-animated.is-closing .fancybox__thumbs {
@@ -4008,7 +4118,8 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .fancybox__container.is-animated[aria-hidden=false] .fancybox__toolbar {
-  animation: 0.15s ease-in backwards fancybox-fadeIn;
+  -webkit-animation: 0.15s ease-in backwards fancybox-fadeIn;
+          animation: 0.15s ease-in backwards fancybox-fadeIn;
 }
 
 .fancybox__container.is-animated.is-closing .fancybox__toolbar {
@@ -4061,6 +4172,10 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 .fancybox__container:-webkit-full-screen::backdrop {
+  opacity: 0;
+}
+
+.fancybox__container:fullscreen::-webkit-backdrop {
   opacity: 0;
 }
 
@@ -4327,7 +4442,8 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 }
 
 #yakutia-map .clicable-img {
-  animation: shake 5s ease-in-out infinite 3s;
+  -webkit-animation: shake 5s ease-in-out infinite 3s;
+          animation: shake 5s ease-in-out infinite 3s;
   position: absolute;
 }
 
